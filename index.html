@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quinta obra interactiva - Augusto Ballardo</title>
+    <meta
+      name="description"
+      content="Obra generativa e interactiva en p5.js inspirada en una serie abstracta geometrica de tubos serpenteantes."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="audio-panel" class="audio-panel">
+      <div class="panel-header">
+        <div class="status-dot" id="status-dot"></div>
+        <h3>Control por Sonido</h3>
+      </div>
+      <p class="panel-desc">Usa el micrófono para interactuar:</p>
+      <ul class="panel-instructions">
+        <li><strong>Chasquido / Golpe:</strong> Cambia el orden de superposición de los tubos.</li>
+        <li><strong>Sonido Grave (Hum largo):</strong> Tubos horizontales con cortes verticales.</li>
+        <li><strong>Sonido Agudo (Silbido):</strong> Cambia los colores dentro de los tubos.</li>
+        <li><strong>Silencio:</strong> Vuelve al estado de curvas original.</li>
+      </ul>
+      <button id="mic-btn" class="mic-btn">Activar Micrófono</button>
+      <div class="meter-container">
+        <div class="meter-label">
+          <span>Nivel de audio:</span>
+          <span id="meter-val">0%</span>
+        </div>
+        <div class="meter-bg">
+          <div id="meter-fill" class="meter-fill"></div>
+        </div>
+      </div>
+      <div class="status-indicator">
+        <span>Estado:</span>
+        <span id="status-mode" class="mode-inactive">Desactivado</span>
+      </div>
+    </div>
+
+    <script src="./libraries/p5.min.js"></script>
+    <script src="./libraries/p5.sound.js"></script>
+    <script src="./sketch.js"></script>
+  </body>
+</html>
